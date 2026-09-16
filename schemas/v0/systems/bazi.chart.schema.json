@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/systems/bazi.chart.schema.json",
+  "title": "BaziChart",
+  "description": "Draft BaZi chart facts (v0). DaYun/LiuNian remain optional extensions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "pillars"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "mystilink.bazi.chart/0.1"
+    },
+    "pillars": {
+      "$ref": "../common/ganzhi-pillars.schema.json"
+    },
+    "day_master": {
+      "$ref": "../common/ganzhi.schema.json",
+      "description": "Usually the day pillar; included for consumer convenience"
+    },
+    "dayun": {
+      "type": "array",
+      "description": "Optional decade fortunes; item shape TBD in a later minor",
+      "items": { "type": "object", "additionalProperties": true }
+    },
+    "liunian": {
+      "type": "object",
+      "description": "Optional annual fortune block; shape TBD",
+      "additionalProperties": true
+    }
+  }
+}

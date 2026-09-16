@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/common/zodiac.schema.json",
+  "title": "Zodiac",
+  "description": "Chinese animal year keyed by earthly-branch index.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "chinese", "branch", "branch_index"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "enum": [
+        "rat", "ox", "tiger", "rabbit", "dragon", "snake",
+        "horse", "goat", "monkey", "rooster", "dog", "pig"
+      ]
+    },
+    "chinese": { "type": "string", "minLength": 1 },
+    "branch": { "type": "string", "minLength": 1 },
+    "branch_index": { "type": "integer", "minimum": 0, "maximum": 11 }
+  }
+}

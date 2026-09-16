@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/envelope.schema.json",
+  "title": "MetaphysicsEnvelope",
+  "description": "Message envelope for metaphysics services and calculator integrations.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "system", "subject", "chart"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "mystilink.envelope/0.1"
+    },
+    "system": {
+      "type": "string",
+      "enum": ["bazi", "ziwei", "horoscope", "tarot", "liuyao", "router", "lunar"]
+    },
+    "locale": {
+      "type": "string",
+      "description": "BCP 47 locale for display strings, e.g. en or zh-Hans"
+    },
+    "subject": {
+      "$ref": "birth.schema.json"
+    },
+    "calendar_basis": {
+      "$ref": "calendar-basis.schema.json"
+    },
+    "chart": {
+      "type": "object",
+      "description": "System-specific chart payload; shape defined under systems/",
+      "additionalProperties": true
+    },
+    "interpretation": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Optional interpretation hooks; not chart facts",
+      "properties": {
+        "wiki_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "notes": {
+          "type": "string",
+          "description": "Non-authoritative free text; prefer wiki_ids"
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "produced_by": {
+          "type": "string",
+          "description": "Producer id@version"
+        },
+        "request_id": { "type": "string" },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

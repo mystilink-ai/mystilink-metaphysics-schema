@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/birth.schema.json",
+  "title": "BirthProfile",
+  "description": "Unified birth subject for metaphysics services and calculators.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "birth"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "mystilink.birth/0.1"
+    },
+    "name": {
+      "type": "string",
+      "description": "Optional display name; use fictional values in examples"
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female", "unspecified"],
+      "default": "unspecified"
+    },
+    "birth": {
+      "$ref": "common/solar-instant.schema.json"
+    },
+    "place": {
+      "$ref": "common/geo.schema.json"
+    },
+    "rules": {
+      "$ref": "common/ganzhi-rules.schema.json",
+      "description": "Optional calendar/ganzhi rule overrides for consumers that need them"
+    }
+  }
+}

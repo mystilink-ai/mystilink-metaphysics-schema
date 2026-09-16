@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/common/lunar-date.schema.json",
+  "title": "LunarDate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["year", "month", "day", "is_leap_month"],
+  "properties": {
+    "year": { "type": "integer" },
+    "month": { "type": "integer", "minimum": 1, "maximum": 12 },
+    "day": { "type": "integer", "minimum": 1, "maximum": 30 },
+    "is_leap_month": { "type": "boolean" }
+  }
+}

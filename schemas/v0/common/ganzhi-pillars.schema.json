@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/common/ganzhi-pillars.schema.json",
+  "title": "GanzhiPillars",
+  "description": "Four pillars: year / month / day / hour.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["year", "month", "day", "hour"],
+  "properties": {
+    "year": { "$ref": "ganzhi.schema.json" },
+    "month": { "$ref": "ganzhi.schema.json" },
+    "day": { "$ref": "ganzhi.schema.json" },
+    "hour": { "$ref": "ganzhi.schema.json" }
+  }
+}

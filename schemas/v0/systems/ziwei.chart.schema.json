@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/systems/ziwei.chart.schema.json",
+  "title": "ZiweiChart",
+  "description": "Draft Zi Wei chart facts (v0). Palace star lists remain loosely typed.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "gender", "ming_gong_branch", "palaces"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "mystilink.ziwei.chart/0.1"
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female"]
+    },
+    "four_pillars": {
+      "$ref": "../common/ganzhi-pillars.schema.json"
+    },
+    "ming_gong_branch": { "type": "string", "minLength": 1 },
+    "shen_gong_branch": { "type": "string" },
+    "palaces": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "object", "additionalProperties": true }
+    },
+    "midnight_zi_rule": {
+      "type": "string",
+      "enum": ["same-day", "next-day"]
+    }
+  }
+}

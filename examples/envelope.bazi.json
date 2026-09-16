@@ -1,0 +1,125 @@
+{
+  "schema_version": "mystilink.envelope/0.1",
+  "system": "bazi",
+  "locale": "en",
+  "subject": {
+    "schema_version": "mystilink.birth/0.1",
+    "name": "Demo",
+    "gender": "female",
+    "birth": {
+      "datetime": "1993-09-28T13:21:00+08:00",
+      "timezone": "Asia/Shanghai"
+    },
+    "rules": {
+      "profile": "bazi_default",
+      "year_boundary": "lichun_exact",
+      "month_boundary": "jie_exact",
+      "day_boundary": "zi_start",
+      "hour_system": "double_hour"
+    }
+  },
+  "calendar_basis": {
+    "schema_version": "mystilink.calendar_basis/0.1",
+    "solar": {
+      "datetime": "1993-09-28T13:21:00+08:00",
+      "timezone": "Asia/Shanghai"
+    },
+    "lunar": {
+      "year": 1993,
+      "month": 8,
+      "day": 13,
+      "is_leap_month": false
+    },
+    "ganzhi": {
+      "year": {
+        "stem_index": 9,
+        "branch_index": 9,
+        "stem": "癸",
+        "branch": "酉",
+        "text": "癸酉"
+      },
+      "month": {
+        "stem_index": 7,
+        "branch_index": 9,
+        "stem": "辛",
+        "branch": "酉",
+        "text": "辛酉"
+      },
+      "day": {
+        "stem_index": 8,
+        "branch_index": 0,
+        "stem": "壬",
+        "branch": "子",
+        "text": "壬子"
+      },
+      "hour": {
+        "stem_index": 3,
+        "branch_index": 7,
+        "stem": "丁",
+        "branch": "未",
+        "text": "丁未"
+      }
+    },
+    "zodiac": {
+      "id": "rooster",
+      "chinese": "鸡",
+      "branch": "酉",
+      "branch_index": 9
+    },
+    "rules": {
+      "year_boundary": "lichun_exact",
+      "month_boundary": "jie_exact",
+      "day_boundary": "zi_start",
+      "hour_system": "double_hour",
+      "profile": "bazi_default"
+    },
+    "provider": "mystilink-lunar@0.1.0a3"
+  },
+  "chart": {
+    "schema_version": "mystilink.bazi.chart/0.1",
+    "pillars": {
+      "year": {
+        "stem_index": 9,
+        "branch_index": 9,
+        "stem": "癸",
+        "branch": "酉",
+        "text": "癸酉"
+      },
+      "month": {
+        "stem_index": 7,
+        "branch_index": 9,
+        "stem": "辛",
+        "branch": "酉",
+        "text": "辛酉"
+      },
+      "day": {
+        "stem_index": 8,
+        "branch_index": 0,
+        "stem": "壬",
+        "branch": "子",
+        "text": "壬子"
+      },
+      "hour": {
+        "stem_index": 3,
+        "branch_index": 7,
+        "stem": "丁",
+        "branch": "未",
+        "text": "丁未"
+      }
+    },
+    "day_master": {
+      "stem_index": 8,
+      "branch_index": 0,
+      "stem": "壬",
+      "branch": "子",
+      "text": "壬子"
+    }
+  },
+  "interpretation": {
+    "wiki_ids": ["bazi.concept.ri-zhu"]
+  },
+  "meta": {
+    "produced_by": "example@0.1.0",
+    "request_id": "demo-001"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/common/solar-term.schema.json",
+  "title": "SolarTerm",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["index", "id", "name", "chinese_name", "solar_longitude", "datetime"],
+  "properties": {
+    "index": { "type": "integer", "minimum": 0, "maximum": 23 },
+    "id": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "chinese_name": { "type": "string", "minLength": 1 },
+    "solar_longitude": { "type": "number" },
+    "datetime": { "type": "string", "format": "date-time" }
+  }
+}

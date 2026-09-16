@@ -1,0 +1,9 @@
+{
+  "error": {
+    "code": "missing_timezone",
+    "message": "timezone is required (IANA name, e.g. Asia/Shanghai)",
+    "details": {
+      "field": "birth.timezone"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": "mystilink.birth/0.1",
+  "birth": {
+    "datetime": "1990-05-15T14:30:00+08:00",
+    "timezone": "Asia/Shanghai"
+  }
+}

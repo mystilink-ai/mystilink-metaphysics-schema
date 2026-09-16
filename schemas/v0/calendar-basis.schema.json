@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/calendar-basis.schema.json",
+  "title": "CalendarBasis",
+  "description": "Optional calendar foundation snapshot (producer: mystilink-lunar or compatible).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "solar", "lunar"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "mystilink.calendar_basis/0.1"
+    },
+    "solar": {
+      "$ref": "common/solar-instant.schema.json"
+    },
+    "lunar": {
+      "$ref": "common/lunar-date.schema.json"
+    },
+    "ganzhi": {
+      "$ref": "common/ganzhi-pillars.schema.json"
+    },
+    "zodiac": {
+      "$ref": "common/zodiac.schema.json"
+    },
+    "rules": {
+      "$ref": "common/ganzhi-rules.schema.json"
+    },
+    "solar_term": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "previous": {
+          "oneOf": [
+            { "$ref": "common/solar-term.schema.json" },
+            { "type": "null" }
+          ]
+        },
+        "next": {
+          "oneOf": [
+            { "$ref": "common/solar-term.schema.json" },
+            { "type": "null" }
+          ]
+        }
+      }
+    },
+    "provider": {
+      "type": "string",
+      "description": "Implementation id, e.g. mystilink-lunar@0.1.0a3"
+    }
+  }
+}

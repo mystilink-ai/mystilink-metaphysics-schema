@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/common/ganzhi-rules.schema.json",
+  "title": "GanzhiRules",
+  "description": "Explicit sexagenary boundary rules (aligned with mystilink-lunar).",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "year_boundary": {
+      "type": "string",
+      "enum": ["chunjie", "lichun_day", "lichun_exact"]
+    },
+    "month_boundary": {
+      "type": "string",
+      "enum": ["jie_exact", "jie_day", "lunar_month"]
+    },
+    "day_boundary": {
+      "type": "string",
+      "enum": ["midnight", "zi_start"]
+    },
+    "hour_system": {
+      "type": "string",
+      "enum": ["double_hour"]
+    },
+    "profile": {
+      "type": "string",
+      "enum": ["lunar_calendar", "bazi_default"],
+      "description": "Optional named preset; concrete fields remain authoritative when present"
+    }
+  }
+}

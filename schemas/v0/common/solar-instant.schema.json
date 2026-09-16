@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/common/solar-instant.schema.json",
+  "title": "SolarInstant",
+  "description": "Timezone-aware civil instant. Naive datetimes are invalid.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["datetime", "timezone"],
+  "properties": {
+    "datetime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 datetime with offset, e.g. 1990-05-15T14:30:00+08:00"
+    },
+    "timezone": {
+      "type": "string",
+      "minLength": 1,
+      "description": "IANA timezone name, e.g. Asia/Shanghai"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "East-positive degrees; used when true solar time is requested"
+    },
+    "true_solar_time": {
+      "type": "boolean",
+      "default": false
+    },
+    "true_solar_time_delta_minutes": {
+      "type": "number",
+      "description": "Applied correction in minutes when true solar time is enabled"
+    }
+  }
+}
