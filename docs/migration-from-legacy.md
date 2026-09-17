@@ -20,10 +20,12 @@ This map helps adapt existing Mystilink skill/calculator JSON to v0 contracts. E
 
 ## Pillars
 
-| Legacy (bazi-calculator) | v0 Ganzhi |
-|--------------------------|-----------|
-| `stem`, `branch`, `ganzhi` | `stem`, `branch`, `text` (+ required `stem_index`, `branch_index`) |
+| Legacy (bazi-calculator ≤0.1) | v0 Ganzhi / calculator 0.2 |
+|-------------------------------|----------------------------|
+| `stem`, `branch`, `ganzhi` | `stem`, `branch`, `text` (+ required `stem_index`, `branch_index`); `ganzhi` kept as alias of `text` |
 | `pillars` | same slots under `chart.pillars` or `calendar_basis.ganzhi` |
+
+See [bazi-0.2-mapping.md](bazi-0.2-mapping.md) for the full calculator 0.2 table. Composition without hard package coupling: [composition.md](composition.md).
 
 ## Envelope
 

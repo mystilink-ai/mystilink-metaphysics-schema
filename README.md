@@ -21,7 +21,7 @@ This repository is a **schema / documentation contract package**. It does **not*
 | `schemas/v0/error.schema.json` | Structured error object |
 | `schemas/v0/systems/` | Draft chart schemas (bazi, ziwei, horoscope) |
 | `examples/` | Valid sample documents (fictional personal data) |
-| `docs/` | Overview, versioning, migration, field index |
+| `docs/` | Overview, versioning, migration, field index, composition, BaZi 0.2 mapping |
 
 ## Quick start
 
@@ -68,7 +68,9 @@ See [docs/versioning.md](docs/versioning.md).
 - `*-calculator` — produce system `chart` objects
 - Downstream services / APIs — exchange `BirthProfile` and `Envelope`
 
-Legacy field mapping: [docs/migration-from-legacy.md](docs/migration-from-legacy.md).
+Legacy field mapping: [docs/migration-from-legacy.md](docs/migration-from-legacy.md).  
+Composition (standalone / BirthProfile / optional lunar): [docs/composition.md](docs/composition.md).  
+BaZi calculator 0.2 fields: [docs/bazi-0.2-mapping.md](docs/bazi-0.2-mapping.md).
 
 ## Limits
 

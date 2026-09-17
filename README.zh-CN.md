@@ -21,7 +21,7 @@
 | `schemas/v0/error.schema.json` | 结构化错误 |
 | `schemas/v0/systems/` | 体系盘面草案（八字、紫微、西洋本命） |
 | `examples/` | 合法示例（虚构个人数据） |
-| `docs/` | 概述、版本、迁移、字段索引 |
+| `docs/` | 概述、版本、迁移、字段索引、组合用法、八字 0.2 对照 |
 
 ## 快速开始
 
@@ -68,7 +68,9 @@ PY
 - `*-calculator` — 产出体系 `chart`
 - 下游服务 / API — 交换 `BirthProfile` 与 `Envelope`
 
-旧字段对照：[docs/migration-from-legacy.md](docs/migration-from-legacy.md)。
+旧字段对照：[docs/migration-from-legacy.md](docs/migration-from-legacy.md)。  
+组合用法（单独 / BirthProfile / 可选 lunar）：[docs/composition.md](docs/composition.md)。  
+八字计算器 0.2 字段：[docs/bazi-0.2-mapping.md](docs/bazi-0.2-mapping.md)。
 
 ## 限制
 
