@@ -15,12 +15,13 @@ Maps `mystilink-bazi-calculator` **0.2.0** JSON to v0 contracts. No runtime depe
 
 ## Chart document
 
-| Calculator 0.2 | `mystilink.bazi.chart/0.1` |
-|----------------|----------------------------|
+| Calculator 0.2.x | `mystilink.bazi.chart/0.1` |
+|------------------|----------------------------|
 | `schema_version` | required const when wrapping as chart |
 | `pillars` | required |
 | `bazi_schema_version` | calculator-only legacy (`1.0`) |
-| `calendar_engine` | calculator extension (`builtin` in 0.2) |
+| `calendar_engine` | `builtin` \| `lunar` \| `external_basis` (0.2.1+) |
+| `calendar_basis` | optional nested snapshot (lunar / external_basis) |
 | `birth_date`, `bazi_ganzhi`, grids | calculator convenience; omit or keep outside strict chart validation |
 
 Strict validation of a calculator dump against `systems/bazi.chart.schema.json` may fail on extra properties (`additionalProperties: false`). Prefer extracting `{ schema_version, pillars }` (and optional `day_master`) when validating as a chart, or wrap via Envelope.
