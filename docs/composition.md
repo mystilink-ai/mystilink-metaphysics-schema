@@ -5,7 +5,7 @@ Contracts are shapes only. Calculators and calendar libraries stay independently
 ## Standalone BaZi
 
 ```bash
-mystilink-bazi calculate --date 1990-05-15 --hour 14 --minute 30
+bazi calculate --date 1990-05-15 --hour 14 --minute 30
 ```
 
 No `mystilink-lunar` or schema package is required. Output still carries Ganzhi indices/`text` aligned with `mystilink.bazi.chart/0.1` (plus legacy fields). `calendar_engine` is `builtin`.
@@ -13,7 +13,7 @@ No `mystilink-lunar` or schema package is required. Output still carries Ganzhi 
 ## BirthProfile input
 
 ```bash
-mystilink-bazi calculate --birth-json birth.json
+bazi calculate --birth-json birth.json
 ```
 
 `birth.json` should match `mystilink.birth/0.1` (see `examples/birth.minimal.json`). Field convention only — calculators do not import this repository.
@@ -22,7 +22,7 @@ mystilink-bazi calculate --birth-json birth.json
 
 ```bash
 python3 -m pip install 'mystilink-bazi-calculator[lunar]'   # Python 3.10+
-mystilink-bazi calculate --date 1990-05-15 --hour 12 \
+bazi calculate --date 1990-05-15 --hour 12 \
   --timezone Asia/Shanghai --calendar-engine lunar
 ```
 
@@ -31,9 +31,9 @@ Uses `GanzhiRules.bazi_default()` inside `mystilink-lunar`. Output sets `calenda
 ## Optional calendar composition (orchestration, no import)
 
 ```bash
-mystilink-lunar convert --date 1990-05-15 --time 12:00 \
+lunar convert --date 1990-05-15 --time 12:00 \
   --timezone Asia/Shanghai --profile bazi --json > basis.json
-mystilink-bazi calculate --calendar-basis basis.json
+bazi calculate --calendar-basis basis.json
 ```
 
 `--calendar-basis` does **not** import `mystilink-lunar`. Accepts `mystilink.calendar_basis/0.1` or lunar convert JSON that includes `ganzhi` four pillars. Output `calendar_engine` is `external_basis`.
