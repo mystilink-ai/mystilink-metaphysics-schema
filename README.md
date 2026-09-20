@@ -19,7 +19,7 @@ This repository is a **schema / documentation contract package**. It does **not*
 | `schemas/v0/calendar-basis.schema.json` | Optional lunar/ganzhi snapshot |
 | `schemas/v0/envelope.schema.json` | Service / API message envelope |
 | `schemas/v0/error.schema.json` | Structured error object |
-| `schemas/v0/systems/` | Draft chart schemas (bazi, ziwei, horoscope) |
+| `schemas/v0/systems/` | Draft chart schemas (bazi, ziwei, horoscope, tarot, liuyao) |
 | `examples/` | Valid sample documents (fictional personal data) |
 | `docs/` | Overview, versioning, migration, field index, composition, BaZi 0.2 mapping |
 
@@ -59,6 +59,10 @@ PY
 | Calendar basis | `mystilink.calendar_basis/0.1` |
 | Envelope | `mystilink.envelope/0.1` |
 | BaZi chart | `mystilink.bazi.chart/0.1` |
+| Zi Wei chart | `mystilink.ziwei.chart/0.1` |
+| Horoscope natal | `mystilink.horoscope.natal/0.1` |
+| Tarot chart | `mystilink.tarot.chart/0.1` |
+| Liu Yao chart | `mystilink.liuyao.chart/0.1` |
 
 See [docs/versioning.md](docs/versioning.md).
 

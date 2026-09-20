@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2 — Envelope subject optional; tarot/liuyao charts
+
+- `envelope.schema.json`: `subject` no longer required (still recommended for birth-based systems)
+- Draft system charts: `tarot.chart`, `liuyao.chart`
+- Docs: composition `--envelope` examples; overview / field-index updated
+- No change to existing `mystilink.*/0.1` const strings
+
 ## 0.1.1 — Composition and BaZi 0.2 mapping
 
 - Docs: [composition.md](docs/composition.md) — standalone vs BirthProfile vs optional lunar (in-process + `--calendar-basis`)

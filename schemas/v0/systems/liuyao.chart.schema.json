@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/systems/liuyao.chart.schema.json",
+  "title": "LiuyaoChart",
+  "description": "Six-line coin cast chart (mystilink.liuyao.chart/0.1).",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "order", "lines", "original_bits", "has_moving"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "mystilink.liuyao.chart/0.1"
+    },
+    "seed": { "type": ["integer", "null"] },
+    "order": { "type": "string", "const": "bottom_to_top" },
+    "lines": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["index", "name", "yin_yang", "moving", "binary"],
+        "properties": {
+          "index": { "type": "integer" },
+          "name": { "type": "string" },
+          "yin_yang": { "type": "string", "enum": ["yin", "yang"] },
+          "moving": { "type": "boolean" },
+          "label": { "type": "string" },
+          "sum": { "type": "integer" },
+          "binary": { "type": "integer", "enum": [0, 1] }
+        },
+        "additionalProperties": true
+      }
+    },
+    "original_bits": { "type": "string", "minLength": 6, "maxLength": 6 },
+    "resulting_bits": { "type": ["string", "null"] },
+    "has_moving": { "type": "boolean" },
+    "wiki_hint": { "type": ["string", "object"] }
+  }
+}

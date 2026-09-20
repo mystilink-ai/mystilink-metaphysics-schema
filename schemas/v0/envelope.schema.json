@@ -5,7 +5,7 @@
   "description": "Message envelope for metaphysics services and calculator integrations.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "system", "subject", "chart"],
+  "required": ["schema_version", "system", "chart"],
   "properties": {
     "schema_version": {
       "type": "string",
@@ -20,7 +20,8 @@
       "description": "BCP 47 locale for display strings, e.g. en or zh-Hans"
     },
     "subject": {
-      "$ref": "birth.schema.json"
+      "$ref": "birth.schema.json",
+      "description": "Birth subject when the system uses civil birth time; optional for tarot/liuyao"
     },
     "calendar_basis": {
       "$ref": "calendar-basis.schema.json"

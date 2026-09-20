@@ -1,0 +1,25 @@
+{
+  "schema_version": "mystilink.envelope/0.1",
+  "system": "tarot",
+  "locale": "en",
+  "chart": {
+    "schema_version": "mystilink.tarot.chart/0.1",
+    "spread": "three-card",
+    "seed": 123,
+    "drawn_at": "2026-01-01T00:00:00Z",
+    "cards": [
+      {
+        "position": "past",
+        "id": "tarot.card.major.00-fool",
+        "name": "The Fool",
+        "arcana": "major",
+        "orientation": "upright"
+      }
+    ],
+    "wiki_hint": "GET /api/v1/pages/{id}?locale=en"
+  },
+  "meta": {
+    "produced_by": "example@0.1.0",
+    "request_id": "demo-tarot-001"
+  }
+}

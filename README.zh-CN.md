@@ -19,7 +19,7 @@
 | `schemas/v0/calendar-basis.schema.json` | 可选农历/干支快照 |
 | `schemas/v0/envelope.schema.json` | 服务 / API 消息信封 |
 | `schemas/v0/error.schema.json` | 结构化错误 |
-| `schemas/v0/systems/` | 体系盘面草案（八字、紫微、西洋本命） |
+| `schemas/v0/systems/` | 体系盘面草案（八字、紫微、西洋本命、塔罗、六爻） |
 | `examples/` | 合法示例（虚构个人数据） |
 | `docs/` | 概述、版本、迁移、字段索引、组合用法、八字 0.2 对照 |
 
@@ -59,6 +59,10 @@ PY
 | Calendar basis | `mystilink.calendar_basis/0.1` |
 | Envelope | `mystilink.envelope/0.1` |
 | BaZi chart | `mystilink.bazi.chart/0.1` |
+| Zi Wei chart | `mystilink.ziwei.chart/0.1` |
+| Horoscope natal | `mystilink.horoscope.natal/0.1` |
+| Tarot chart | `mystilink.tarot.chart/0.1` |
+| Liu Yao chart | `mystilink.liuyao.chart/0.1` |
 
 详见 [docs/versioning.md](docs/versioning.md)。
 

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/systems/tarot.chart.schema.json",
+  "title": "TarotChart",
+  "description": "RWS tarot draw chart (mystilink.tarot.chart/0.1).",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "spread", "seed", "drawn_at", "cards"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "mystilink.tarot.chart/0.1"
+    },
+    "spread": { "type": "string" },
+    "seed": { "type": "integer" },
+    "drawn_at": { "type": "string", "format": "date-time" },
+    "cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["position", "id", "name", "arcana", "orientation"],
+        "properties": {
+          "position": { "type": "string" },
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "arcana": { "type": "string", "enum": ["major", "minor"] },
+          "suit": { "type": "string" },
+          "orientation": { "type": "string", "enum": ["upright", "reversed"] }
+        },
+        "additionalProperties": true
+      }
+    },
+    "wiki_hint": { "type": ["string", "object"] }
+  }
+}
