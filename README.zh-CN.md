@@ -70,7 +70,8 @@ PY
 
 旧字段对照：[docs/migration-from-legacy.md](docs/migration-from-legacy.md)。  
 组合用法（单独 / BirthProfile / 可选 lunar）：[docs/composition.md](docs/composition.md)。  
-八字计算器 0.2 字段：[docs/bazi-0.2-mapping.md](docs/bazi-0.2-mapping.md)。
+八字计算器 0.2 字段：[docs/bazi-0.2-mapping.md](docs/bazi-0.2-mapping.md)。  
+紫微 / 西洋盘 0.2 字段：[docs/ziwei-horoscope-0.2-mapping.md](docs/ziwei-horoscope-0.2-mapping.md)。
 
 ## 限制
 

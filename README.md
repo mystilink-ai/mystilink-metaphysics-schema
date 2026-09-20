@@ -70,7 +70,8 @@ See [docs/versioning.md](docs/versioning.md).
 
 Legacy field mapping: [docs/migration-from-legacy.md](docs/migration-from-legacy.md).  
 Composition (standalone / BirthProfile / optional lunar): [docs/composition.md](docs/composition.md).  
-BaZi calculator 0.2 fields: [docs/bazi-0.2-mapping.md](docs/bazi-0.2-mapping.md).
+BaZi calculator 0.2 fields: [docs/bazi-0.2-mapping.md](docs/bazi-0.2-mapping.md).  
+Zi Wei / Horoscope 0.2 fields: [docs/ziwei-horoscope-0.2-mapping.md](docs/ziwei-horoscope-0.2-mapping.md).
 
 ## Limits
 
