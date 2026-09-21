@@ -1,6 +1,6 @@
 # Mystilink 术数数据结构标准
 
-> Languages: [English](README.md) | [简体中文](README.zh-CN.md)
+> Languages: [English](../../README.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Français](README.fr.md) | [Español](README.es.md)
 
 ## 概述
 
@@ -64,7 +64,7 @@ PY
 | Tarot chart | `mystilink.tarot.chart/0.1` |
 | Liu Yao chart | `mystilink.liuyao.chart/0.1` |
 
-详见 [docs/versioning.md](docs/versioning.md)。
+详见 [docs/versioning.md](../versioning.md)。
 
 ## 与其他仓库的关系
 
@@ -72,10 +72,10 @@ PY
 - `*-calculator` — 产出体系 `chart`
 - 下游服务 / API — 交换 `BirthProfile` 与 `Envelope`
 
-旧字段对照：[docs/migration-from-legacy.md](docs/migration-from-legacy.md)。  
-组合用法（单独 / BirthProfile / 可选 lunar）：[docs/composition.md](docs/composition.md)。  
-八字计算器 0.2 字段：[docs/bazi-0.2-mapping.md](docs/bazi-0.2-mapping.md)。  
-紫微 / 西洋盘 0.2 字段：[docs/ziwei-horoscope-0.2-mapping.md](docs/ziwei-horoscope-0.2-mapping.md)。
+旧字段对照：[docs/migration-from-legacy.md](../migration-from-legacy.md)。  
+组合用法（单独 / BirthProfile / 可选 lunar）：[docs/composition.md](../composition.md)。  
+八字计算器 0.2 字段：[docs/bazi-0.2-mapping.md](../bazi-0.2-mapping.md)。  
+紫微 / 西洋盘 0.2 字段：[docs/ziwei-horoscope-0.2-mapping.md](../ziwei-horoscope-0.2-mapping.md)。
 
 ## 限制
 
@@ -85,7 +85,7 @@ PY
 
 ## 许可
 
-MIT。见 [LICENSE](LICENSE)。
+MIT。见 [LICENSE](../../LICENSE)。
 
 ## 问题反馈
 
