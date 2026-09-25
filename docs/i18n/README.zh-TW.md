@@ -6,6 +6,11 @@
 
 面向玄學服務與整合場景的 JSON Schema 契約：出生檔案、曆法基座、體系盤面與訊息信封。本倉庫只定義資料結構，不進行排盤或解讀計算。
 
+## 相關位址
+
+- Agent：https://www.mystilink.com
+- 理論 Wiki：https://wiki.mystilink.com（API `/api/v1`）
+
 ## 交付類型
 
 本倉庫為 **schema / 文件契約套件**。**不適用**計算器倉庫的 C / C++ / C# / Java / JavaScript / Python 語言矩陣。日後若增加可選校驗器，在正式發布多語言 SDK 之前仍按契約倉說明；發布 SDK 時再按矩陣交付。
@@ -19,9 +24,10 @@
 | `schemas/v0/calendar-basis.schema.json` | 可選農曆/干支快照 |
 | `schemas/v0/envelope.schema.json` | 服務 / API 訊息信封 |
 | `schemas/v0/error.schema.json` | 結構化錯誤 |
-| `schemas/v0/systems/` | 體系盤面草案（八字、紫微、西洋本命、塔羅、六爻） |
+| `schemas/v0/systems/` | 體系盤面 schema（八字 / 紫微 / 西洋本命·日運·月運已穩定；塔羅/六爻較寬鬆） |
 | `examples/` | 合法範例（虛構個人資料） |
-| `docs/` | 概述、版本、遷移、欄位索引、組合用法、八字 0.2 對照 |
+| `docs/` | 概述、版本、遷移、欄位索引、組合用法、八字對照、[對齊矩陣](../alignment-matrix.md) |
+| `tests/` | 範例 Draft 2020-12 校驗（`pip install -e '.[dev]' && pytest`） |
 
 ## 快速開始
 
@@ -61,6 +67,8 @@ PY
 | BaZi chart | `mystilink.bazi.chart/0.1` |
 | Zi Wei chart | `mystilink.ziwei.chart/0.1` |
 | Horoscope natal | `mystilink.horoscope.natal/0.1` |
+| Horoscope daily | `mystilink.horoscope.daily/0.1` |
+| Horoscope monthly | `mystilink.horoscope.monthly/0.1` |
 | Tarot chart | `mystilink.tarot.chart/0.1` |
 | Liu Yao chart | `mystilink.liuyao.chart/0.1` |
 
@@ -79,7 +87,9 @@ PY
 
 ## 限制
 
-- `systems/` 下盤面 schema 為草案；宮位/行星等巢狀項有意保持寬鬆
+- 八字 / 紫微 / 西洋（本命、日運、月運）盤面 schema 已依現行計算器輸出穩定
+- 塔羅 / 六爻體系 schema 在根層仍較寬鬆（chart 根為 `additionalProperties: true`）
+- Envelope 的 `chart` 仍為開放物件（尚未按體系做 `oneOf`）
 - 不包含排盤或解讀引擎
 - 未交付語言矩陣 SDK 綁定
 

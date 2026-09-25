@@ -6,6 +6,11 @@
 
 현학 서비스와 통합을 위한 JSON Schema 계약: 출생 프로필, 역법 기반, 체계 차트, 메시지 엔벨로프. 이 저장소는 형태만 정의하며 배반이나 해석을 수행하지 않습니다.
 
+## 엔드포인트
+
+- Agent: https://www.mystilink.com
+- 이론 Wiki: https://wiki.mystilink.com (API `/api/v1`)
+
 ## 제공 유형
 
 이 저장소는 **스키마 / 문서 계약 패키지**입니다. 계산기 저장소의 C / C++ / C# / Java / JavaScript / Python 언어 매트릭스는 **적용하지 않습니다**. 선택적 검증기를 나중에 추가해도, 다국어 SDK를 의도적으로 공개하기 전까지는 이 분류를 유지합니다.
@@ -19,9 +24,10 @@
 | `schemas/v0/calendar-basis.schema.json` | 선택적 음력/간지 스냅샷 |
 | `schemas/v0/envelope.schema.json` | 서비스 / API 메시지 엔벨로프 |
 | `schemas/v0/error.schema.json` | 구조화 오류 |
-| `schemas/v0/systems/` | 체계 차트 초안(팔자, 자미, 서양 네이탈, 타로, 육효) |
+| `schemas/v0/systems/` | 체계 차트 스키마(팔자 / 자미 / 서양 네이탈·일간·월간 안정화; 타로/육효는 느슨함) |
 | `examples/` | 유효 샘플(가상의 개인 데이터) |
-| `docs/` | 개요, 버전, 이전, 필드 색인, 조합, 팔자 0.2 대응 |
+| `docs/` | 개요, 버전, 이전, 필드 색인, 조합, 팔자 대응, [alignment matrix](../alignment-matrix.md) |
+| `tests/` | 예제 Draft 2020-12 검증 (`pip install -e '.[dev]' && pytest`) |
 
 ## 빠른 시작
 
@@ -61,6 +67,8 @@ PY
 | BaZi chart | `mystilink.bazi.chart/0.1` |
 | Zi Wei chart | `mystilink.ziwei.chart/0.1` |
 | Horoscope natal | `mystilink.horoscope.natal/0.1` |
+| Horoscope daily | `mystilink.horoscope.daily/0.1` |
+| Horoscope monthly | `mystilink.horoscope.monthly/0.1` |
 | Tarot chart | `mystilink.tarot.chart/0.1` |
 | Liu Yao chart | `mystilink.liuyao.chart/0.1` |
 
@@ -79,9 +87,11 @@ PY
 
 ## 제한
 
-- `systems/` 아래 차트 스키마는 초안; 궁위/행성 등 중첩은 의도적으로 느슨함
-- 배반·해석 엔진 없음
-- 언어 매트릭스 SDK 바인딩 미포함
+- 팔자 / 자미 / 서양(네이탈, 일간, 월간) 차트 스키마는 현재 계산기 출력에 맞춰 안정화됨
+- 타로 / 육효 체계 스키마는 루트에서 여전히 느슨함(`chart` 루트는 `additionalProperties: true`)
+- Envelope `chart`는 아직 개방형 객체(체계별 `oneOf` 미적용)
+- 차트 계산·해석 엔진은 포함하지 않음
+- 언어 매트릭스 SDK 바인딩은 제공하지 않음
 
 ## 라이선스
 

@@ -6,6 +6,11 @@
 
 玄学サービスと統合向けの JSON Schema 契約：出生プロフィール、暦基盤、体系盤面、メッセージエンベロープ。本リポジトリは形状のみを定義し、排盤や解読は行いません。
 
+## エンドポイント
+
+- Agent：https://www.mystilink.com
+- 理論 Wiki：https://wiki.mystilink.com（API `/api/v1`）
+
 ## デリバリ種別
 
 本リポジトリは **スキーマ / ドキュメント契約パッケージ**です。計算機リポジトリの C / C++ / C# / Java / JavaScript / Python 言語マトリクスは**適用しません**。任意の検証器を後から追加しても、多言語 SDK を意図的に公開するまではこの分類のままです。
@@ -19,9 +24,10 @@
 | `schemas/v0/calendar-basis.schema.json` | 任意の旧暦/干支スナップショット |
 | `schemas/v0/envelope.schema.json` | サービス / API メッセージエンベロープ |
 | `schemas/v0/error.schema.json` | 構造化エラー |
-| `schemas/v0/systems/` | 体系盤面ドラフト（八字、紫微、西洋ネイタル、タロット、六爻） |
+| `schemas/v0/systems/` | 体系盤面スキーマ（八字 / 紫微 / 西洋ネイタル・日次・月次は安定；タロット/六爻は緩め） |
 | `examples/` | 妥当なサンプル（架空の個人データ） |
-| `docs/` | 概要、版管理、移行、フィールド索引、組み合わせ、八字 0.2 対応 |
+| `docs/` | 概要、版管理、移行、フィールド索引、組み合わせ、八字対応、[alignment matrix](../alignment-matrix.md) |
+| `tests/` | 例の Draft 2020-12 検証（`pip install -e '.[dev]' && pytest`） |
 
 ## クイックスタート
 
@@ -61,6 +67,8 @@ PY
 | BaZi chart | `mystilink.bazi.chart/0.1` |
 | Zi Wei chart | `mystilink.ziwei.chart/0.1` |
 | Horoscope natal | `mystilink.horoscope.natal/0.1` |
+| Horoscope daily | `mystilink.horoscope.daily/0.1` |
+| Horoscope monthly | `mystilink.horoscope.monthly/0.1` |
 | Tarot chart | `mystilink.tarot.chart/0.1` |
 | Liu Yao chart | `mystilink.liuyao.chart/0.1` |
 
@@ -79,8 +87,10 @@ PY
 
 ## 制限
 
-- `systems/` 配下の盤面スキーマはドラフト；宮位/惑星などの入れ子は意図的に緩め
-- 排盤・解読エンジンは含まない
+- 八字 / 紫微 / 西洋（ネイタル、日次、月次）の盤面スキーマは現行計算機出力に合わせて安定化済み
+- タロット / 六爻の体系スキーマはルートで依然として緩め（`chart` ルートは `additionalProperties: true`）
+- Envelope の `chart` は未だオープンなオブジェクト（体系ごとの `oneOf` は未導入）
+- 排盤・解釈エンジンは含まない
 - 言語マトリクス SDK バインディングは同梱しない
 
 ## ライセンス

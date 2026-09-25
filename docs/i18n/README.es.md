@@ -6,6 +6,11 @@
 
 Contratos JSON Schema para servicios e integraciones de metafísica: perfiles de nacimiento, base calendárica, cartas de sistema y sobres de mensaje. Este repositorio solo define formas; no calcula cartas ni produce lecturas.
 
+## Puntos de acceso
+
+- Agent: https://www.mystilink.com
+- Wiki teórica: https://wiki.mystilink.com (API `/api/v1`)
+
 ## Tipo de entrega
 
 Este repositorio es un **paquete de contrato de esquema / documentación**. **No** implementa la matriz de lenguajes C / C++ / C# / Java / JavaScript / Python de las bibliotecas calculadoras. Pueden añadirse validadores opcionales más adelante sin cambiar esa clasificación hasta que se publique intencionadamente un SDK multilingüe.
@@ -19,9 +24,10 @@ Este repositorio es un **paquete de contrato de esquema / documentación**. **No
 | `schemas/v0/calendar-basis.schema.json` | Instantánea lunar/ganzhi opcional |
 | `schemas/v0/envelope.schema.json` | Sobre de mensaje de servicio / API |
 | `schemas/v0/error.schema.json` | Objeto de error estructurado |
-| `schemas/v0/systems/` | Borradores de cartas (bazi, ziwei, horoscope, tarot, liuyao) |
+| `schemas/v0/systems/` | Esquemas de carta de sistema (BaZi / Zi Wei / Horoscope natal·diario·mensual estabilizados; tarot/liuyao más flexibles) |
 | `examples/` | Documentos de ejemplo válidos (datos personales ficticios) |
-| `docs/` | Resumen, versionado, migración, índice de campos, composición, correspondencia BaZi 0.2 |
+| `docs/` | Resumen, versionado, migración, índice de campos, composición, correspondencia BaZi, [matriz de alineación](../alignment-matrix.md) |
+| `tests/` | Validación de ejemplos Draft 2020-12 (`pip install -e '.[dev]' && pytest`) |
 
 ## Inicio rápido
 
@@ -61,6 +67,8 @@ PY
 | BaZi chart | `mystilink.bazi.chart/0.1` |
 | Zi Wei chart | `mystilink.ziwei.chart/0.1` |
 | Horoscope natal | `mystilink.horoscope.natal/0.1` |
+| Horoscope daily | `mystilink.horoscope.daily/0.1` |
+| Horoscope monthly | `mystilink.horoscope.monthly/0.1` |
 | Tarot chart | `mystilink.tarot.chart/0.1` |
 | Liu Yao chart | `mystilink.liuyao.chart/0.1` |
 
@@ -79,7 +87,9 @@ Campos Zi Wei / Horoscope 0.2: [docs/ziwei-horoscope-0.2-mapping.md](../ziwei-ho
 
 ## Límites
 
-- Los esquemas de carta bajo `systems/` son borradores; las formas anidadas de palacio/planeta son intencionadamente flexibles
+- Los esquemas de carta BaZi / Zi Wei / Horoscope (natal, diario, mensual) están estabilizados para las salidas actuales de los calculadores
+- Los esquemas de sistema tarot / liuyao siguen siendo más flexibles en la raíz (`additionalProperties: true` en la raíz `chart`)
+- El `chart` del sobre sigue siendo un objeto abierto (aún sin `oneOf` por sistema)
 - No se incluye motor de cálculo ni de interpretación de cartas
 - No se entregan enlaces SDK de la matriz de lenguajes
 

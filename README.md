@@ -6,6 +6,11 @@
 
 JSON Schema contracts for metaphysics services and integrations: birth profiles, calendar basis, system charts, and message envelopes. This repository defines shapes only; it does not compute charts or produce readings.
 
+## Endpoints
+
+- Agent: https://www.mystilink.com
+- Theory Wiki: https://wiki.mystilink.com (API `/api/v1`)
+
 ## Delivery type
 
 This repository is a **schema / documentation contract package**. It does **not** implement the C / C++ / C# / Java / JavaScript / Python language matrix used by calculator libraries. Optional validators may be added later without changing that classification until a multi-language SDK is intentionally published.
@@ -19,9 +24,10 @@ This repository is a **schema / documentation contract package**. It does **not*
 | `schemas/v0/calendar-basis.schema.json` | Optional lunar/ganzhi snapshot |
 | `schemas/v0/envelope.schema.json` | Service / API message envelope |
 | `schemas/v0/error.schema.json` | Structured error object |
-| `schemas/v0/systems/` | Draft chart schemas (bazi, ziwei, horoscope, tarot, liuyao) |
+| `schemas/v0/systems/` | System chart schemas (BaZi / Zi Wei / Horoscope natal·daily·monthly stabilized; tarot/liuyao looser) |
 | `examples/` | Valid sample documents (fictional personal data) |
-| `docs/` | Overview, versioning, migration, field index, composition, BaZi 0.2 mapping |
+| `docs/` | Overview, versioning, migration, field index, composition, BaZi mapping, [alignment matrix](docs/alignment-matrix.md) |
+| `tests/` | Example validation against Draft 2020-12 (`pip install -e '.[dev]' && pytest`) |
 
 ## Quick start
 
@@ -61,6 +67,8 @@ PY
 | BaZi chart | `mystilink.bazi.chart/0.1` |
 | Zi Wei chart | `mystilink.ziwei.chart/0.1` |
 | Horoscope natal | `mystilink.horoscope.natal/0.1` |
+| Horoscope daily | `mystilink.horoscope.daily/0.1` |
+| Horoscope monthly | `mystilink.horoscope.monthly/0.1` |
 | Tarot chart | `mystilink.tarot.chart/0.1` |
 | Liu Yao chart | `mystilink.liuyao.chart/0.1` |
 
@@ -79,7 +87,9 @@ Zi Wei / Horoscope 0.2 fields: [docs/ziwei-horoscope-0.2-mapping.md](docs/ziwei-
 
 ## Limits
 
-- System chart schemas under `systems/` are drafts; nested palace/planet item shapes are intentionally loose
+- BaZi / Zi Wei / Horoscope (natal, daily, monthly) chart schemas are stabilized for current calculator dumps
+- Tarot / Liu Yao system schemas remain looser at the root (`additionalProperties: true` on chart root)
+- Envelope `chart` is still an open object (not yet `oneOf` over systems)
 - No chart computation or interpretation engine is included
 - Language-matrix SDK bindings are not shipped
 
