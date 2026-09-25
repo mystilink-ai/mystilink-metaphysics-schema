@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/systems/horoscope.monthly.schema.json",
+  "title": "HoroscopeMonthlyTransit",
+  "description": "Western monthly transit facts (mystilink.horoscope.monthly/0.1).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "kind", "year", "month", "samples"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "mystilink.horoscope.monthly/0.1"
+    },
+    "kind": { "type": "string", "const": "monthly" },
+    "year": { "type": "integer" },
+    "month": { "type": "integer", "minimum": 1, "maximum": 12 },
+    "timezone": { "type": "string" },
+    "sample_dates": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "samples": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["date"],
+        "properties": {
+          "date": { "type": "string" },
+          "sun_sign": { "type": "string" },
+          "sun_longitude": { "type": "number" },
+          "hard_aspect_count": { "type": "integer" },
+          "soft_aspect_count": { "type": "integer" },
+          "total_aspects": { "type": "integer" },
+          "overall_tone": { "type": "string" },
+          "aspect_counts": { "type": "object", "additionalProperties": true }
+        }
+      }
+    },
+    "sun_sign_path": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "mid_month_sun": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

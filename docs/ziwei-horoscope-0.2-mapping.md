@@ -1,6 +1,6 @@
-# Zi Wei / Horoscope calculator 0.2 field mapping
+# Zi Wei / Horoscope calculator field mapping
 
-Maps calculator **0.2.0** JSON to v0 contracts. No runtime dependency on this repository.
+Maps calculator **0.2.x** JSON to v0 contracts. No runtime dependency on this repository.
 
 ## Shared BirthProfile input
 
@@ -11,23 +11,37 @@ Maps calculator **0.2.0** JSON to v0 contracts. No runtime dependency on this re
 | ziwei `--gender` | `gender` (`male` \| `female`) |
 | horoscope `--lat` / `--lon` | `place.lat` / `place.lon` (or `birth.longitude`) |
 
-## Zi Wei chart
+## Zi Wei chart (`mystilink.ziwei.chart/0.1`)
 
-| Calculator 0.2 | `mystilink.ziwei.chart/0.1` |
-|----------------|----------------------------|
+| Calculator field | Contract |
+|------------------|----------|
 | `schema_version` | required const |
 | `gender` | required |
 | `ming_gong_branch` | required |
-| `palaces` | required |
-| other fields | calculator extensions (`additionalProperties` allowed) |
+| `palaces` | required; 12 items with `palace_index`, `branch`, `name`; star lists are string arrays |
+| `four_pillars` | optional; currently stem+branch **strings**; Ganzhi objects also accepted |
+| `shen_gong_branch`, `midnight_zi_rule`, lunar/meta fields | documented optional extensions |
+| `si_hua`, `liunian` | optional blocks when requested |
 
-## Horoscope natal
+Strict validation of a full calculator dump against `systems/ziwei.chart.schema.json` should succeed (see `examples/ziwei.chart.json`).
 
-| Calculator 0.2 | `mystilink.horoscope.natal/0.1` |
-|----------------|--------------------------------|
+## Horoscope natal (`mystilink.horoscope.natal/0.1`)
+
+| Calculator field | Contract |
+|------------------|----------|
 | `schema_version` | required const |
-| `planets` | alias of legacy `points` |
-| `points` | legacy; keep for ≥1 minor |
-| `house_system`, `zodiac_mode` | map to `house_system` / `zodiac_system` loosely |
+| `planets` | required; preferred |
+| `points` | legacy alias of `planets` (≥1 minor) |
+| `zodiac_system` | preferred; calculator also emits `zodiac_mode` as legacy alias |
+| `house_cusps` | 12 numbers (calculator path); `houses` array optional / unused |
+| `asc` / `mc` / `aspects` | typed angle / aspect objects |
+| `kind` | optional `natal` (CLI sets it) |
 
-Daily / monthly emit `mystilink.horoscope.daily/0.1` and `mystilink.horoscope.monthly/0.1` (calculator extensions; not yet separate schema files).
+## Horoscope daily / monthly
+
+| Document | `schema_version` | Schema file |
+|----------|------------------|-------------|
+| Daily transit | `mystilink.horoscope.daily/0.1` | `systems/horoscope.daily.schema.json` |
+| Monthly transit | `mystilink.horoscope.monthly/0.1` | `systems/horoscope.monthly.schema.json` |
+
+Examples: `examples/horoscope.daily.json`, `examples/horoscope.monthly.json`.

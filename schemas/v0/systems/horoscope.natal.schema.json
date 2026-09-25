@@ -2,36 +2,117 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.mystilink.com/metaphysics/v0/systems/horoscope.natal.schema.json",
   "title": "HoroscopeNatalChart",
-  "description": "Draft Western natal chart facts (v0).",
+  "description": "Western natal chart facts (mystilink.horoscope.natal/0.1). Prefer planets; points is a legacy alias.",
   "type": "object",
-  "additionalProperties": true,
+  "additionalProperties": false,
   "required": ["schema_version", "planets"],
   "properties": {
     "schema_version": {
       "type": "string",
       "const": "mystilink.horoscope.natal/0.1"
     },
+    "kind": {
+      "type": "string",
+      "const": "natal",
+      "description": "CLI sets kind=natal; optional for library callers"
+    },
     "zodiac_system": {
       "type": "string",
       "enum": ["tropical", "sidereal"],
-      "default": "tropical"
+      "description": "Preferred zodiac field name"
+    },
+    "zodiac_mode": {
+      "type": "string",
+      "enum": ["tropical", "sidereal"],
+      "description": "Legacy alias of zodiac_system; keep for ≥1 minor"
     },
     "house_system": {
       "type": "string",
       "description": "House system code, e.g. P for Placidus"
     },
+    "sidereal_mode": {
+      "type": ["string", "null"]
+    },
+    "ayanamsa": {
+      "type": ["number", "null"]
+    },
     "planets": {
       "type": "array",
       "minItems": 1,
-      "items": { "type": "object", "additionalProperties": true }
+      "items": { "$ref": "#/$defs/point" }
+    },
+    "points": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/point" },
+      "description": "Legacy alias of planets"
     },
     "houses": {
       "type": "array",
-      "items": { "type": "object", "additionalProperties": true }
+      "items": { "type": "object", "additionalProperties": true },
+      "description": "Optional structured houses; calculator currently emits house_cusps instead"
+    },
+    "house_cusps": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": { "type": "number" }
     },
     "aspects": {
       "type": "array",
-      "items": { "type": "object", "additionalProperties": true }
+      "items": { "$ref": "#/$defs/aspect" }
+    },
+    "asc": { "$ref": "#/$defs/anglePoint" },
+    "mc": { "$ref": "#/$defs/anglePoint" },
+    "local_datetime": { "type": "string" },
+    "effective_local_datetime": { "type": "string" },
+    "utc_datetime": { "type": "string" },
+    "julian_day_ut": { "type": "number" },
+    "latitude": { "type": "number" },
+    "longitude": { "type": "number" },
+    "true_solar_time_enabled": { "type": "boolean" },
+    "true_solar_time_delta_minutes": { "type": "number" },
+    "skipped_points": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "longitude"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "longitude": { "type": "number" },
+        "sign": { "type": "string" },
+        "sign_degree": { "type": "number" },
+        "house": { "type": "integer", "minimum": 1, "maximum": 12 }
+      }
+    },
+    "anglePoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["longitude"],
+      "properties": {
+        "longitude": { "type": "number" },
+        "sign": { "type": "string" },
+        "sign_degree": { "type": "number" }
+      }
+    },
+    "aspect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["point_a", "point_b", "aspect"],
+      "properties": {
+        "point_a": { "type": "string" },
+        "point_b": { "type": "string" },
+        "aspect": { "type": "string" },
+        "aspect_abbr": { "type": "string" },
+        "angle": { "type": "number" },
+        "exact_angle": { "type": "number" },
+        "orb": { "type": "number" }
+      }
     }
   }
 }

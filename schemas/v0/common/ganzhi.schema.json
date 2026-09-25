@@ -15,6 +15,23 @@
       "type": "string",
       "minLength": 2,
       "description": "Concatenation of stem + branch, e.g. 癸酉"
+    },
+    "ganzhi": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Legacy alias of text; keep for ≥1 minor"
+    },
+    "stem_element": {
+      "type": "string",
+      "description": "Optional five-element label for the stem (e.g. Metal)"
+    },
+    "branch_element": {
+      "type": "string",
+      "description": "Optional five-element label for the branch"
+    },
+    "zodiac": {
+      "type": "string",
+      "description": "Optional zodiac animal label for the branch (e.g. Horse)"
     }
   }
 }

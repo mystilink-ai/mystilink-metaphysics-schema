@@ -17,5 +17,9 @@
 | BaZi chart | `schemas/v0/systems/bazi.chart.schema.json` |
 | Zi Wei chart | `schemas/v0/systems/ziwei.chart.schema.json` |
 | Horoscope natal | `schemas/v0/systems/horoscope.natal.schema.json` |
+| Horoscope daily | `schemas/v0/systems/horoscope.daily.schema.json` |
+| Horoscope monthly | `schemas/v0/systems/horoscope.monthly.schema.json` |
 | Tarot chart | `schemas/v0/systems/tarot.chart.schema.json` |
 | Liu Yao chart | `schemas/v0/systems/liuyao.chart.schema.json` |
+
+Alignment coverage across packages: [alignment-matrix.md](alignment-matrix.md).

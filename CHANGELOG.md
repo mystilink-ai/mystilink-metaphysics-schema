@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.4 — Zi Wei / Horoscope chart alignment
+
+- `systems/ziwei.chart.schema.json`: `additionalProperties: false`; typed 12 palaces; documented calculator fields; `four_pillars` accepts Ganzhi or legacy strings
+- `systems/horoscope.natal.schema.json`: tightened points/aspects/asc/mc; `planets` + legacy `points`; `zodiac_system` + legacy `zodiac_mode`; `house_cusps`
+- New: `horoscope.daily.schema.json`, `horoscope.monthly.schema.json`
+- Examples: `ziwei.chart.json`, `horoscope.natal.json`, `horoscope.daily.json`, `horoscope.monthly.json`
+- Docs: mapping + alignment matrix updated
+- Instance version strings unchanged (`*.chart|natal|daily|monthly/0.1`)
+
+## 0.1.3 — BaZi chart alignment
+
+- `ganzhi.schema.json`: optional `ganzhi`, `stem_element`, `branch_element`, `zodiac`
+- `systems/bazi.chart.schema.json`: require `day_master`; document calculator convenience fields; keep `additionalProperties: false`
+- Example `examples/bazi.chart.json`; pytest suite validates all examples (`pip install -e '.[dev]' && pytest`)
+- Docs: [alignment-matrix.md](docs/alignment-matrix.md); BaZi mapping updated
+- Instance `schema_version` strings unchanged (`mystilink.bazi.chart/0.1`)
+
 ## 0.1.2 — Envelope subject optional; tarot/liuyao charts
 
 - `envelope.schema.json`: `subject` no longer required (still recommended for birth-based systems)

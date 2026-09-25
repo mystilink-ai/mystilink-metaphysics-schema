@@ -1,0 +1,70 @@
+{
+  "schema_version": "mystilink.bazi.chart/0.1",
+  "bazi_schema_version": "1.0",
+  "calendar_engine": "builtin",
+  "birth_date": "1990-05-15",
+  "hour_interval": 12,
+  "effective_hour": 12,
+  "effective_minute": 0,
+  "true_solar_time_enabled": false,
+  "true_solar_time_delta_minutes": 0.0,
+  "pillars": {
+    "year": {
+      "stem_index": 6,
+      "branch_index": 6,
+      "stem": "庚",
+      "branch": "午",
+      "text": "庚午",
+      "ganzhi": "庚午",
+      "stem_element": "Metal",
+      "branch_element": "Fire",
+      "zodiac": "Horse"
+    },
+    "month": {
+      "stem_index": 7,
+      "branch_index": 5,
+      "stem": "辛",
+      "branch": "巳",
+      "text": "辛巳",
+      "ganzhi": "辛巳",
+      "stem_element": "Metal",
+      "branch_element": "Fire",
+      "zodiac": "Snake"
+    },
+    "day": {
+      "stem_index": 6,
+      "branch_index": 4,
+      "stem": "庚",
+      "branch": "辰",
+      "text": "庚辰",
+      "ganzhi": "庚辰",
+      "stem_element": "Metal",
+      "branch_element": "Earth",
+      "zodiac": "Dragon"
+    },
+    "hour": {
+      "stem_index": 8,
+      "branch_index": 6,
+      "stem": "壬",
+      "branch": "午",
+      "text": "壬午",
+      "ganzhi": "壬午",
+      "stem_element": "Water",
+      "branch_element": "Fire",
+      "zodiac": "Horse"
+    }
+  },
+  "day_master": {
+    "stem_index": 6,
+    "branch_index": 4,
+    "stem": "庚",
+    "branch": "辰",
+    "text": "庚辰",
+    "ganzhi": "庚辰",
+    "stem_element": "Metal",
+    "branch_element": "Earth",
+    "zodiac": "Dragon"
+  },
+  "bazi_ganzhi": "庚午 辛巳 庚辰 壬午",
+  "summary_zh": "出生日期：1990-05-15，时间：12:00\n四柱：庚午 辛巳 庚辰 壬午\n年柱：庚午（干五行 Metal，生肖 Horse）\n月柱：辛巳\n日柱：庚辰\n时柱：壬午"
+}

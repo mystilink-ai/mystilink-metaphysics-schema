@@ -1,0 +1,109 @@
+{
+  "schema_version": "mystilink.horoscope.monthly/0.1",
+  "kind": "monthly",
+  "year": 2024,
+  "month": 6,
+  "timezone": "Asia/Shanghai",
+  "sample_dates": [
+    "2024-06-01",
+    "2024-06-15",
+    "2024-06-30"
+  ],
+  "samples": [
+    {
+      "date": "2024-06-01",
+      "sun_sign": "Gemini",
+      "sun_longitude": 71.16093782831214,
+      "hard_aspect_count": 11,
+      "soft_aspect_count": 10,
+      "total_aspects": 21,
+      "overall_tone": "mixed",
+      "aspect_counts": {
+        "Conjunction": 6,
+        "Opposition": 0,
+        "Square": 5,
+        "Trine": 7,
+        "Sextile": 3
+      }
+    },
+    {
+      "date": "2024-06-15",
+      "sun_sign": "Gemini",
+      "sun_longitude": 84.55756998444731,
+      "hard_aspect_count": 13,
+      "soft_aspect_count": 7,
+      "total_aspects": 20,
+      "overall_tone": "challenging",
+      "aspect_counts": {
+        "Conjunction": 6,
+        "Opposition": 1,
+        "Square": 6,
+        "Trine": 6,
+        "Sextile": 1
+      }
+    },
+    {
+      "date": "2024-06-30",
+      "sun_sign": "Cancer",
+      "sun_longitude": 98.86677057705631,
+      "hard_aspect_count": 24,
+      "soft_aspect_count": 11,
+      "total_aspects": 35,
+      "overall_tone": "challenging",
+      "aspect_counts": {
+        "Conjunction": 8,
+        "Opposition": 8,
+        "Square": 8,
+        "Trine": 7,
+        "Sextile": 4
+      }
+    }
+  ],
+  "sun_sign_path": [
+    "Gemini",
+    "Cancer"
+  ],
+  "mid_month_sun": {
+    "sign": "Gemini",
+    "sign_degree": 24.557569984447312,
+    "longitude": 84.55756998444731
+  },
+  "summary": {
+    "aspect_counts_total": {
+      "Conjunction": 20,
+      "Opposition": 9,
+      "Square": 19,
+      "Trine": 20,
+      "Sextile": 8
+    },
+    "hard_aspect_count_total": 48,
+    "soft_aspect_count_total": 28,
+    "avg_hard_aspects_per_sample": 16.0,
+    "avg_soft_aspects_per_sample": 9.333,
+    "theme_score_averages": {
+      "communication": 0.004,
+      "drive": 0.319,
+      "emotion": -0.922,
+      "expansion": -1.28,
+      "identity": 0.63,
+      "relationship": -0.869,
+      "structure": -1.129
+    },
+    "dominant_theme": "expansion",
+    "overall_tone": "challenging",
+    "notable_hard_aspect_pressure": true
+  },
+  "meta": {
+    "house_system": "P",
+    "zodiac_mode": "tropical",
+    "sidereal_mode": null,
+    "latitude": 31.2,
+    "longitude": 121.5,
+    "birth_datetime": "1990-05-15 14:30",
+    "hard_aspect_names": [
+      "Conjunction",
+      "Opposition",
+      "Square"
+    ]
+  }
+}

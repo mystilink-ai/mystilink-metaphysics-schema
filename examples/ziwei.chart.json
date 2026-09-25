@@ -1,0 +1,312 @@
+{
+  "schema_version": "mystilink.ziwei.chart/0.1",
+  "solar_local": "1990-05-15T14:30:00+09:00",
+  "solar_used_for_lunar": "1990-05-15T14:30:00",
+  "midnight_zi_rule": "same-day",
+  "true_solar_time_enabled": false,
+  "true_solar_time_delta_minutes": null,
+  "gender": "male",
+  "yin_yang": "阳",
+  "zodiac": "马",
+  "lunar": {
+    "year": 1990,
+    "month": 4,
+    "day": 21,
+    "leap_month": false,
+    "year_stem": "庚",
+    "year_branch": "午",
+    "year_pillar": "庚午"
+  },
+  "four_pillars": {
+    "year": "庚午",
+    "month": "辛巳",
+    "day": "庚辰",
+    "hour": "癸未"
+  },
+  "hour_branch": "未",
+  "ming_gong_branch": "戌",
+  "shen_gong_branch": "子",
+  "ming_zhu": "禄存",
+  "shen_zhu": "火星",
+  "ming_gong_pillar": "丙戌",
+  "na_yin": "屋上土",
+  "five_element_frame": "土五局",
+  "five_element_number": 5,
+  "ziwei_branch": "戌",
+  "tianfu_branch": "午",
+  "palaces": [
+    {
+      "palace_index": 0,
+      "branch": "寅",
+      "name": "官禄",
+      "stem": "戊",
+      "pillar": "戊寅",
+      "main_stars": [
+        "廉贞"
+      ],
+      "minor_stars": [],
+      "mini_stars": [],
+      "life_stage": "病",
+      "scholar_stage": "飞廉",
+      "annual_general": "白虎",
+      "annual_officer": "指背",
+      "decade_range": "45-54",
+      "note": ""
+    },
+    {
+      "palace_index": 1,
+      "branch": "卯",
+      "name": "交友",
+      "stem": "己",
+      "pillar": "己卯",
+      "main_stars": [],
+      "minor_stars": [
+        "文昌"
+      ],
+      "mini_stars": [
+        "天喜",
+        "咸池",
+        "三台"
+      ],
+      "life_stage": "死",
+      "scholar_stage": "喜神",
+      "annual_general": "天德",
+      "annual_officer": "咸池",
+      "decade_range": "55-64",
+      "note": ""
+    },
+    {
+      "palace_index": 2,
+      "branch": "辰",
+      "name": "迁移",
+      "stem": "庚",
+      "pillar": "庚辰",
+      "main_stars": [
+        "破军"
+      ],
+      "minor_stars": [
+        "地空"
+      ],
+      "mini_stars": [
+        "天姚",
+        "寡宿",
+        "凤阁",
+        "恩光"
+      ],
+      "life_stage": "墓",
+      "scholar_stage": "病符",
+      "annual_general": "吊客",
+      "annual_officer": "月煞",
+      "decade_range": "65-74",
+      "note": ""
+    },
+    {
+      "palace_index": 3,
+      "branch": "巳",
+      "name": "疾厄",
+      "stem": "辛",
+      "pillar": "辛巳",
+      "main_stars": [
+        "天同"
+      ],
+      "minor_stars": [],
+      "mini_stars": [],
+      "life_stage": "绝",
+      "scholar_stage": "大耗",
+      "annual_general": "病符",
+      "annual_officer": "亡神",
+      "decade_range": "75-84",
+      "note": ""
+    },
+    {
+      "palace_index": 4,
+      "branch": "午",
+      "name": "财帛",
+      "stem": "壬",
+      "pillar": "壬午",
+      "main_stars": [
+        "武曲",
+        "天府"
+      ],
+      "minor_stars": [
+        "地劫"
+      ],
+      "mini_stars": [],
+      "life_stage": "胎",
+      "scholar_stage": "伏兵",
+      "annual_general": "岁建",
+      "annual_officer": "将星",
+      "decade_range": "85-94",
+      "note": ""
+    },
+    {
+      "palace_index": 5,
+      "branch": "未",
+      "name": "子女",
+      "stem": "癸",
+      "pillar": "癸未",
+      "main_stars": [
+        "太阳",
+        "太阴"
+      ],
+      "minor_stars": [
+        "左辅",
+        "右弼",
+        "天钺",
+        "陀罗"
+      ],
+      "mini_stars": [
+        "天空"
+      ],
+      "life_stage": "养",
+      "scholar_stage": "官府",
+      "annual_general": "晦气",
+      "annual_officer": "攀鞍",
+      "decade_range": "95-104",
+      "note": ""
+    },
+    {
+      "palace_index": 6,
+      "branch": "申",
+      "name": "夫妻",
+      "stem": "甲",
+      "pillar": "甲申",
+      "main_stars": [
+        "贪狼"
+      ],
+      "minor_stars": [
+        "禄存",
+        "火星"
+      ],
+      "mini_stars": [
+        "天马",
+        "孤辰",
+        "天巫"
+      ],
+      "life_stage": "长生",
+      "scholar_stage": "博士",
+      "annual_general": "丧门",
+      "annual_officer": "岁驿",
+      "decade_range": "105-114",
+      "note": ""
+    },
+    {
+      "palace_index": 7,
+      "branch": "酉",
+      "name": "兄弟",
+      "stem": "乙",
+      "pillar": "乙酉",
+      "main_stars": [
+        "天机",
+        "巨门"
+      ],
+      "minor_stars": [
+        "擎羊"
+      ],
+      "mini_stars": [
+        "红鸾",
+        "封诰"
+      ],
+      "life_stage": "沐浴",
+      "scholar_stage": "力士",
+      "annual_general": "贯索",
+      "annual_officer": "息神",
+      "decade_range": "115-124",
+      "note": ""
+    },
+    {
+      "palace_index": 8,
+      "branch": "戌",
+      "name": "命宫",
+      "stem": "丙",
+      "pillar": "丙戌",
+      "main_stars": [
+        "紫微",
+        "天相"
+      ],
+      "minor_stars": [
+        "铃星"
+      ],
+      "mini_stars": [
+        "龙池",
+        "华盖",
+        "旬空"
+      ],
+      "life_stage": "冠带",
+      "scholar_stage": "青龙",
+      "annual_general": "官符",
+      "annual_officer": "华盖",
+      "decade_range": "5-14",
+      "note": ""
+    },
+    {
+      "palace_index": 9,
+      "branch": "亥",
+      "name": "父母",
+      "stem": "丁",
+      "pillar": "丁亥",
+      "main_stars": [
+        "天梁"
+      ],
+      "minor_stars": [
+        "文曲"
+      ],
+      "mini_stars": [
+        "天月",
+        "阴煞",
+        "八座",
+        "旬空"
+      ],
+      "life_stage": "临官",
+      "scholar_stage": "小耗",
+      "annual_general": "小耗",
+      "annual_officer": "劫煞",
+      "decade_range": "15-24",
+      "note": ""
+    },
+    {
+      "palace_index": 10,
+      "branch": "子",
+      "name": "福德",
+      "stem": "戊",
+      "pillar": "戊子",
+      "main_stars": [
+        "七杀"
+      ],
+      "minor_stars": [],
+      "mini_stars": [
+        "天刑",
+        "天哭",
+        "天虚",
+        "天贵"
+      ],
+      "life_stage": "帝旺",
+      "scholar_stage": "将军",
+      "annual_general": "大耗",
+      "annual_officer": "灾煞",
+      "decade_range": "25-34",
+      "note": ""
+    },
+    {
+      "palace_index": 11,
+      "branch": "丑",
+      "name": "田宅",
+      "stem": "己",
+      "pillar": "己丑",
+      "main_stars": [],
+      "minor_stars": [
+        "天魁"
+      ],
+      "mini_stars": [
+        "台辅"
+      ],
+      "life_stage": "衰",
+      "scholar_stage": "奏书",
+      "annual_general": "龙德",
+      "annual_officer": "天煞",
+      "decade_range": "35-44",
+      "note": ""
+    }
+  ],
+  "calendar_engine": "builtin"
+}

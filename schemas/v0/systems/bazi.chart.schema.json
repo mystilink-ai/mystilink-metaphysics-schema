@@ -2,10 +2,10 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://schemas.mystilink.com/metaphysics/v0/systems/bazi.chart.schema.json",
   "title": "BaziChart",
-  "description": "Draft BaZi chart facts (v0). DaYun/LiuNian remain optional extensions.",
+  "description": "BaZi chart facts (mystilink.bazi.chart/0.1). Core required fields plus documented calculator convenience extensions. DaYun/LiuNian item shapes remain loosely typed.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "pillars"],
+  "required": ["schema_version", "pillars", "day_master"],
   "properties": {
     "schema_version": {
       "type": "string",
@@ -16,7 +16,7 @@
     },
     "day_master": {
       "$ref": "../common/ganzhi.schema.json",
-      "description": "Usually the day pillar; included for consumer convenience"
+      "description": "Day pillar Ganzhi; required for consumers that key off the day master"
     },
     "dayun": {
       "type": "array",
@@ -27,6 +27,50 @@
       "type": "object",
       "description": "Optional annual fortune block; shape TBD",
       "additionalProperties": true
+    },
+    "bazi_schema_version": {
+      "type": "string",
+      "description": "Legacy calculator package marker (e.g. 1.0); prefer schema_version"
+    },
+    "calendar_engine": {
+      "type": "string",
+      "enum": ["builtin", "lunar", "external_basis"]
+    },
+    "calendar_basis": {
+      "type": "object",
+      "description": "Optional nested calendar snapshot when calendar_engine is lunar or external_basis",
+      "additionalProperties": true
+    },
+    "birth_date": {
+      "type": "string",
+      "description": "Civil birth date YYYY-MM-DD (calculator convenience)"
+    },
+    "hour_interval": { "type": "integer" },
+    "effective_hour": { "type": "integer" },
+    "effective_minute": { "type": "integer" },
+    "true_solar_time_enabled": { "type": "boolean" },
+    "true_solar_time_delta_minutes": { "type": "number" },
+    "birth": {
+      "type": "object",
+      "description": "Optional civil birth instant when timezone is known",
+      "additionalProperties": false,
+      "properties": {
+        "datetime": { "type": "string" },
+        "timezone": { "type": "string" }
+      }
+    },
+    "bazi_ganzhi": {
+      "type": "string",
+      "description": "Single-line four-pillar display string"
+    },
+    "summary_zh": { "type": "string" },
+    "bazi_grid_cells": {
+      "type": "array",
+      "items": { "type": "object", "additionalProperties": true }
+    },
+    "bazi_details": {
+      "type": "array",
+      "items": { "type": "object", "additionalProperties": true }
     }
   }
 }

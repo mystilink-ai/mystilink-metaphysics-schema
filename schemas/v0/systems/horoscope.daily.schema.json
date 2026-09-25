@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.mystilink.com/metaphysics/v0/systems/horoscope.daily.schema.json",
+  "title": "HoroscopeDailyTransit",
+  "description": "Western daily transit facts (mystilink.horoscope.daily/0.1).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "kind", "target_date", "natal", "transit_points"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "mystilink.horoscope.daily/0.1"
+    },
+    "kind": { "type": "string", "const": "daily" },
+    "target_date": { "type": "string", "description": "YYYY-MM-DD" },
+    "transit_datetime": { "type": "string" },
+    "timezone": { "type": "string" },
+    "natal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["points"],
+      "properties": {
+        "local_datetime": { "type": "string" },
+        "asc": { "type": "object", "additionalProperties": true },
+        "mc": { "type": "object", "additionalProperties": true },
+        "points": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "object", "additionalProperties": true }
+        },
+        "skipped_points": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "transit_points": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "object", "additionalProperties": true }
+    },
+    "transit_asc": { "type": "object", "additionalProperties": true },
+    "transit_mc": { "type": "object", "additionalProperties": true },
+    "aspects_to_natal": {
+      "type": "array",
+      "items": { "type": "object", "additionalProperties": true }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

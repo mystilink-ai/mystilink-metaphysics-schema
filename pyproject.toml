@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mystilink-metaphysics-schema"
+version = "0.1.4"
+description = "JSON Schema contracts for Mystilink birth profiles, calendar basis, envelopes, and system charts"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Mystilink" }]
+keywords = ["mystilink", "json-schema", "metaphysics", "bazi"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Documentation",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "jsonschema>=4.18", "referencing>=0.30"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

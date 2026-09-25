@@ -1,0 +1,439 @@
+{
+  "schema_version": "mystilink.horoscope.daily/0.1",
+  "kind": "daily",
+  "target_date": "2024-06-01",
+  "transit_datetime": "2024-06-01T12:00:00+08:00",
+  "timezone": "Asia/Shanghai",
+  "natal": {
+    "local_datetime": "1990-05-15T14:30:00+09:00",
+    "asc": {
+      "longitude": 168.520895351878,
+      "sign": "Virgo",
+      "sign_degree": 18.52089535187801
+    },
+    "mc": {
+      "longitude": 77.75330718773253,
+      "sign": "Gemini",
+      "sign_degree": 17.75330718773253
+    },
+    "points": [
+      {
+        "name": "Sun",
+        "longitude": 54.134962752116415,
+        "sign": "Taurus",
+        "sign_degree": 24.134962752116415,
+        "house": 9
+      },
+      {
+        "name": "Moon",
+        "longitude": 293.824117358909,
+        "sign": "Capricorn",
+        "sign_degree": 23.824117358909007,
+        "house": 5
+      },
+      {
+        "name": "Mercury",
+        "longitude": 38.04779934645663,
+        "sign": "Taurus",
+        "sign_degree": 8.047799346456628,
+        "house": 8
+      },
+      {
+        "name": "Venus",
+        "longitude": 12.509453049135113,
+        "sign": "Aries",
+        "sign_degree": 12.509453049135113,
+        "house": 7
+      },
+      {
+        "name": "Mars",
+        "longitude": 348.132688250536,
+        "sign": "Pisces",
+        "sign_degree": 18.132688250535978,
+        "house": 6
+      },
+      {
+        "name": "Jupiter",
+        "longitude": 99.49049810350988,
+        "sign": "Cancer",
+        "sign_degree": 9.490498103509879,
+        "house": 10
+      },
+      {
+        "name": "Saturn",
+        "longitude": 295.25396337528707,
+        "sign": "Capricorn",
+        "sign_degree": 25.25396337528707,
+        "house": 5
+      },
+      {
+        "name": "Uranus",
+        "longitude": 279.19054822161723,
+        "sign": "Capricorn",
+        "sign_degree": 9.190548221617235,
+        "house": 4
+      },
+      {
+        "name": "Neptune",
+        "longitude": 284.3568773489797,
+        "sign": "Capricorn",
+        "sign_degree": 14.356877348979708,
+        "house": 4
+      },
+      {
+        "name": "Pluto",
+        "longitude": 226.17495330914414,
+        "sign": "Scorpio",
+        "sign_degree": 16.174953309144144,
+        "house": 3
+      },
+      {
+        "name": "TrueNode",
+        "longitude": 310.2599988634157,
+        "sign": "Aquarius",
+        "sign_degree": 10.259998863415717,
+        "house": 5
+      }
+    ],
+    "skipped_points": [
+      "Chiron"
+    ]
+  },
+  "transit_points": [
+    {
+      "name": "Sun",
+      "longitude": 71.16093782831214,
+      "sign": "Gemini",
+      "sign_degree": 11.160937828312143,
+      "house": 9
+    },
+    {
+      "name": "Moon",
+      "longitude": 0.313461277733383,
+      "sign": "Aries",
+      "sign_degree": 0.313461277733383,
+      "house": 7
+    },
+    {
+      "name": "Mercury",
+      "longitude": 55.853934106349904,
+      "sign": "Taurus",
+      "sign_degree": 25.853934106349904,
+      "house": 9
+    },
+    {
+      "name": "Venus",
+      "longitude": 70.2175882463403,
+      "sign": "Gemini",
+      "sign_degree": 10.217588246340298,
+      "house": 9
+    },
+    {
+      "name": "Mars",
+      "longitude": 24.005620211739544,
+      "sign": "Aries",
+      "sign_degree": 24.005620211739544,
+      "house": 8
+    },
+    {
+      "name": "Jupiter",
+      "longitude": 61.45398204606237,
+      "sign": "Gemini",
+      "sign_degree": 1.4539820460623716,
+      "house": 9
+    },
+    {
+      "name": "Saturn",
+      "longitude": 348.75484253386907,
+      "sign": "Pisces",
+      "sign_degree": 18.754842533869066,
+      "house": 7
+    },
+    {
+      "name": "Uranus",
+      "longitude": 54.18255540566666,
+      "sign": "Taurus",
+      "sign_degree": 24.182555405666662,
+      "house": 9
+    },
+    {
+      "name": "Neptune",
+      "longitude": 359.6685723203858,
+      "sign": "Pisces",
+      "sign_degree": 29.668572320385806,
+      "house": 7
+    },
+    {
+      "name": "Pluto",
+      "longitude": 301.908413006108,
+      "sign": "Aquarius",
+      "sign_degree": 1.9084130061079918,
+      "house": 5
+    },
+    {
+      "name": "TrueNode",
+      "longitude": 14.045540905895633,
+      "sign": "Aries",
+      "sign_degree": 14.045540905895633,
+      "house": 8
+    }
+  ],
+  "transit_asc": {
+    "longitude": 164.17527100765048,
+    "sign": "Virgo",
+    "sign_degree": 14.17527100765048
+  },
+  "transit_mc": {
+    "longitude": 73.05925834646114,
+    "sign": "Gemini",
+    "sign_degree": 13.059258346461135
+  },
+  "aspects_to_natal": [
+    {
+      "point_a": "tSun",
+      "point_b": "nVenus",
+      "aspect": "Sextile",
+      "aspect_abbr": "Sex",
+      "angle": 60.0,
+      "exact_angle": 58.65148477917703,
+      "orb": 1.3485152208229678
+    },
+    {
+      "point_a": "tSun",
+      "point_b": "nTrueNode",
+      "aspect": "Trine",
+      "aspect_abbr": "Tri",
+      "angle": 120.0,
+      "exact_angle": 120.90093896489643,
+      "orb": 0.9009389648964259
+    },
+    {
+      "point_a": "tMercury",
+      "point_b": "nSun",
+      "aspect": "Conjunction",
+      "aspect_abbr": "Conj",
+      "angle": 0.0,
+      "exact_angle": 1.7189713542334886,
+      "orb": 1.7189713542334886
+    },
+    {
+      "point_a": "tMercury",
+      "point_b": "nMoon",
+      "aspect": "Trine",
+      "aspect_abbr": "Tri",
+      "angle": 120.0,
+      "exact_angle": 122.02981674744089,
+      "orb": 2.02981674744089
+    },
+    {
+      "point_a": "tMercury",
+      "point_b": "nSaturn",
+      "aspect": "Trine",
+      "aspect_abbr": "Tri",
+      "angle": 120.0,
+      "exact_angle": 120.59997073106283,
+      "orb": 0.5999707310628253
+    },
+    {
+      "point_a": "tVenus",
+      "point_b": "nVenus",
+      "aspect": "Sextile",
+      "aspect_abbr": "Sex",
+      "angle": 60.0,
+      "exact_angle": 57.70813519720519,
+      "orb": 2.2918648027948123
+    },
+    {
+      "point_a": "tVenus",
+      "point_b": "nTrueNode",
+      "aspect": "Trine",
+      "aspect_abbr": "Tri",
+      "angle": 120.0,
+      "exact_angle": 119.9575893829246,
+      "orb": 0.04241061707540439
+    },
+    {
+      "point_a": "tMars",
+      "point_b": "nMoon",
+      "aspect": "Square",
+      "aspect_abbr": "Sqr",
+      "angle": 90.0,
+      "exact_angle": 90.18150285283053,
+      "orb": 0.18150285283053336
+    },
+    {
+      "point_a": "tMars",
+      "point_b": "nSaturn",
+      "aspect": "Square",
+      "aspect_abbr": "Sqr",
+      "angle": 90.0,
+      "exact_angle": 88.75165683645247,
+      "orb": 1.2483431635475313
+    },
+    {
+      "point_a": "tJupiter",
+      "point_b": "nSun",
+      "aspect": "Conjunction",
+      "aspect_abbr": "Conj",
+      "angle": 0.0,
+      "exact_angle": 7.319019293945956,
+      "orb": 7.319019293945956
+    },
+    {
+      "point_a": "tSaturn",
+      "point_b": "nMars",
+      "aspect": "Conjunction",
+      "aspect_abbr": "Conj",
+      "angle": 0.0,
+      "exact_angle": 0.6221542833330886,
+      "orb": 0.6221542833330886
+    },
+    {
+      "point_a": "tSaturn",
+      "point_b": "nPluto",
+      "aspect": "Trine",
+      "aspect_abbr": "Tri",
+      "angle": 120.0,
+      "exact_angle": 122.57988922472492,
+      "orb": 2.5798892247249228
+    },
+    {
+      "point_a": "tUranus",
+      "point_b": "nSun",
+      "aspect": "Conjunction",
+      "aspect_abbr": "Conj",
+      "angle": 0.0,
+      "exact_angle": 0.047592653550246666,
+      "orb": 0.047592653550246666
+    },
+    {
+      "point_a": "tUranus",
+      "point_b": "nMoon",
+      "aspect": "Trine",
+      "aspect_abbr": "Tri",
+      "angle": 120.0,
+      "exact_angle": 120.35843804675767,
+      "orb": 0.3584380467576693
+    },
+    {
+      "point_a": "tUranus",
+      "point_b": "nSaturn",
+      "aspect": "Trine",
+      "aspect_abbr": "Tri",
+      "angle": 120.0,
+      "exact_angle": 118.9285920303796,
+      "orb": 1.0714079696203953
+    },
+    {
+      "point_a": "tPluto",
+      "point_b": "nSaturn",
+      "aspect": "Conjunction",
+      "aspect_abbr": "Conj",
+      "angle": 0.0,
+      "exact_angle": 6.6544496308209204,
+      "orb": 6.6544496308209204
+    },
+    {
+      "point_a": "tTrueNode",
+      "point_b": "nVenus",
+      "aspect": "Conjunction",
+      "aspect_abbr": "Conj",
+      "angle": 0.0,
+      "exact_angle": 1.5360878567605205,
+      "orb": 1.5360878567605205
+    },
+    {
+      "point_a": "tTrueNode",
+      "point_b": "nJupiter",
+      "aspect": "Square",
+      "aspect_abbr": "Sqr",
+      "angle": 90.0,
+      "exact_angle": 85.44495719761424,
+      "orb": 4.555042802385756
+    },
+    {
+      "point_a": "tTrueNode",
+      "point_b": "nUranus",
+      "aspect": "Square",
+      "aspect_abbr": "Sqr",
+      "angle": 90.0,
+      "exact_angle": 94.85499268427839,
+      "orb": 4.854992684278386
+    },
+    {
+      "point_a": "tTrueNode",
+      "point_b": "nNeptune",
+      "aspect": "Square",
+      "aspect_abbr": "Sqr",
+      "angle": 90.0,
+      "exact_angle": 89.68866355691591,
+      "orb": 0.3113364430840875
+    },
+    {
+      "point_a": "tTrueNode",
+      "point_b": "nTrueNode",
+      "aspect": "Sextile",
+      "aspect_abbr": "Sex",
+      "angle": 60.0,
+      "exact_angle": 63.785542042479904,
+      "orb": 3.7855420424799036
+    }
+  ],
+  "summary": {
+    "aspect_counts": {
+      "Conjunction": 6,
+      "Opposition": 0,
+      "Square": 5,
+      "Trine": 7,
+      "Sextile": 3
+    },
+    "hard_aspect_count": 11,
+    "soft_aspect_count": 10,
+    "total_aspects": 21,
+    "themes": {
+      "identity": {
+        "score": 0.436,
+        "aspect_hits": 6,
+        "tone": "supportive"
+      },
+      "emotion": {
+        "score": -0.19,
+        "aspect_hits": 4,
+        "tone": "mixed"
+      },
+      "communication": {
+        "score": 0.0,
+        "aspect_hits": 0,
+        "tone": "mixed"
+      },
+      "relationship": {
+        "score": 0.79,
+        "aspect_hits": 3,
+        "tone": "supportive"
+      },
+      "drive": {
+        "score": -0.196,
+        "aspect_hits": 2,
+        "tone": "mixed"
+      },
+      "expansion": {
+        "score": -0.544,
+        "aspect_hits": 1,
+        "tone": "challenging"
+      },
+      "structure": {
+        "score": 0.109,
+        "aspect_hits": 5,
+        "tone": "mixed"
+      }
+    },
+    "overall_tone": "mixed"
+  },
+  "meta": {
+    "house_system": "P",
+    "zodiac_mode": "tropical",
+    "sidereal_mode": null,
+    "latitude": 31.2,
+    "longitude": 121.5
+  }
+}
